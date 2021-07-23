@@ -1,0 +1,8 @@
+pyrcc5 icons.qrc -o icons_rc.py
+pyuic5 -x pv.ui -o pv.py                
+pyuic5 -x main.ui -o main.py
+pyuic5 -x main.ui -o main.py
+pyuic5 -x optimizer.ui -o optimizer.py
+pyuic5 -x diesel.ui -o diesel.py
+pyuic5 -x project.ui -o project.py
+pyuic5 -x battery.ui -o battery.py
