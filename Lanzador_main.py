@@ -8,6 +8,7 @@ import Lanzador_diesel as dg
 import Lanzador_battery as bat
 import Lanzador_project as proj
 import Lanzador_optimizer as op    
+import Lanzador_graficos_ce as gr 
 
 import os
 import funcion_tabla as ft
@@ -32,8 +33,37 @@ class Principal_c(QtWidgets.QMainWindow):
         self.ui.pushButton_4.clicked.connect(self.battery_bank)
         self.ui.pushButton_2.clicked.connect(self.diesel_gen)
         self.ui.pushButton_5.clicked.connect(self.project_data)
-        self.ui.pushButton_6.clicked.connect(self.optimizador)   
+        self.ui.pushButton_6.clicked.connect(self.optimizador)
+        self.ui.pushButton_3.clicked.connect(self.getxlsx)   
 
+    def getxlsx(self):
+        self.ui.pushButton_3.setEnabled(0);
+        self.ui.pushButton_3.setText("Loading...");      
+        self.repaint()        
+        import os
+        import pandas as pd
+        
+        self.filename=QtWidgets.QFileDialog.getOpenFileName(self,"Seleccionar Documento",os.getcwd(),"Files (*.xlsx);;Files (*.TIF);;Files (*.Docx);;Files (*.Pdf);;Files (*.Doc);;All Files (*.*)")
+        if self.filename !=0:
+                
+            try:
+                self.ui.lineEdit.setText(self.filename[0])
+
+                self.SW=gr.Principal_g()
+                self.SW.ui.label.setText(self.filename[0])
+                self.SW.show()
+                print(self.filename[0])
+                #self.datos=pd.ExcelFile(str(self.filename[0]))
+                #self.ui.comboBox.addItems(list(self.datos.sheet_names))
+            except (ValueError,KeyError,FileNotFoundError):
+                pass
+        elif self.filename ==0:
+            print("Cargue archivo")
+            
+        self.ui.pushButton_3.setEnabled(1) 
+        self.ui.pushButton_3.setText("Load Data");          
+        self.repaint()
+ 
     def keyPressEvent(self, e):
         if (e.modifiers() & QtCore.Qt.ControlModifier):
             selected = self.ui.tableWidget.selectedRanges()

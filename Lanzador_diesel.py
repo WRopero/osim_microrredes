@@ -40,7 +40,7 @@ class Diesel(QtWidgets.QDialog):
         self.ui.doubleSpinBox_10.setValue(df.loc[0,'alc'])   
         self.ui.doubleSpinBox_11.setValue(df.loc[0,'afc'])  
 
-        
+        self.ui.pushButton_2.clicked.connect(self.guardar)        
         
     def keyPressEvent(self, e):
         if (e.modifiers() & QtCore.Qt.ControlModifier):
@@ -63,45 +63,46 @@ class Diesel(QtWidgets.QDialog):
                     s = s[:-1] + "\n" #eliminate last '\t'
                 self.ui.clip.setText(s)
                 
-    def guardar_c(self):
+    def guardar(self):
         
         try:
-            print("Hola")
-        #    name = (self.ui.lineEdit_3.text()).upper()
-        #    empresa = (self.ui.lineEdit_4.text()).upper()
-        #    cargo = (self.ui.lineEdit_5.text()).capitalize()
-        #    correo = (self.ui.lineEdit_7.text()).lower()
-        #    celular = self.ui.lineEdit_9.text()   +" " + self.ui.lineEdit_6.text()  
-        #    fijo = self.ui.lineEdit_10.text()   +" " +self.ui.lineEdit_8.text()
-        #    ubica = (self.ui.lineEdit_11.text()).capitalize()
-        #    pagina_web = (self.ui.lineEdit_12.text()).lower()
-        #    servicio = (self.ui.textEdit.toPlainText()).capitalize()
-        #    
-        #    conn = sqlite3.connect("BD_COMPRAS.sqlite3")    
-        #    
-        #    argumentos = (name, empresa, cargo, correo,celular,fijo,ubica,pagina_web,servicio, datetime.date.today())
-        #    sql = """INSERT INTO CONTACTOS_GENERAL (Nombre,Empresa,Cargo,correo,Tel_Celular,Tel_Fijo,Ubicacion,Pagina_web,Tipo_servicio,Fecha_ingreso)
-        #    VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"""
-        #    try:
-        #        conn.execute(sql, argumentos)
-        #        conn.commit()
-        #        conn.close()
-        #    except:
-        #        from PyQt5 import  QtWidgets
-        #        msg=QtWidgets.QMessageBox()
-        #        msg.about(self, "Error", "Ha ocurrido un error al guardar los datos.")
-        #        
-        #    self.ui.label_15.setText('<html><head/><body><p align="center"><span style=" font-size:10pt; color:#37a651;">%s</span></p></body></html>'%("GUARDADO - "+ name))
-        #    self.ui.lineEdit_3.clear()
-        #    self.ui.lineEdit_4.clear()
-        #    self.ui.lineEdit_5.clear()
-        #    self.ui.lineEdit_7.clear()
-        #    self.ui.lineEdit_6.clear()
-        #    self.ui.lineEdit_8.clear()
-        #    self.ui.lineEdit_11.clear()
-        #    self.ui.lineEdit_12.clear()
-        #    self.ui.textEdit.clear()
+            cki_dg = float(self.ui.doubleSpinBox_4.text())  
+            pdg_min = float(self.ui.doubleSpinBox.text()) 
+            n_dg = float( self.ui.doubleSpinBox_3.text())   
+            cdg = float( self.ui.doubleSpinBox_5.text()) 
+            factor_ini_inv= float( self.ui.doubleSpinBox_6.text())
+            cec = float(self.ui.doubleSpinBox_7.text())  
+            cel = float(self.ui.doubleSpinBox_8.text()) 
+            lifecycle = float(self.ui.doubleSpinBox_9.text())
+            alc = float(self.ui.doubleSpinBox_10.text())   
+            afc = float(self.ui.doubleSpinBox_11.text())             
+
             
+            conn = sqlite3.connect("config.db")
+            sql = f"""UPDATE diesel SET 
+            cki_dg = {cki_dg}, 
+            pdg_min = {pdg_min},
+            n_dg = {n_dg},
+            cdg = {cdg},
+            factor_ini_inv = {factor_ini_inv},
+            cec = {cec},
+            cel = {cel},
+            lifecycle = {lifecycle},
+            alc = {alc},
+            afc = {afc};"""
+
+            try:
+                conn.execute(sql)
+                conn.commit()
+                conn.close()
+            except:
+                from PyQt5 import  QtWidgets                
+                msg=QtWidgets.QMessageBox()
+                msg.about(self, "Error", "Ha ocurrido un error al guardar los datos.")
+            from PyQt5 import  QtWidgets
+            msg=QtWidgets.QMessageBox()
+            msg.about(self, "Ok", "The data have been updated")
+       
         
         except:
             import traceback
@@ -113,7 +114,6 @@ class Diesel(QtWidgets.QDialog):
             msg.about(self, "Error", "Error en consulta. "+ pymsg) 
             self.ui.label_15.setText('<html><head/><body><p align="center"><span style=" font-size:10pt; color:#37a651;">%s</span></p></body></html>'%("ERROR"))
                 
-    
             
     def borrar_id(self):
         print("Hola")

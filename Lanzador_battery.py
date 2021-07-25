@@ -49,7 +49,7 @@ class Battery(QtWidgets.QDialog):
         self.ui.doubleSpinBox_15.setValue(df.loc[0,'nd'])
         self.ui.doubleSpinBox_16.setValue(df.loc[0,'nc'])       
         
-
+        self.ui.pushButton_2.clicked.connect(self.guardar)
         
         
     def keyPressEvent(self, e):
@@ -73,45 +73,54 @@ class Battery(QtWidgets.QDialog):
                     s = s[:-1] + "\n" #eliminate last '\t'
                 self.ui.clip.setText(s)
                 
-    def guardar_c(self):
+    def guardar(self):
         
         try:
-            print("Hola")
-        #    name = (self.ui.lineEdit_3.text()).upper()
-        #    empresa = (self.ui.lineEdit_4.text()).upper()
-        #    cargo = (self.ui.lineEdit_5.text()).capitalize()
-        #    correo = (self.ui.lineEdit_7.text()).lower()
-        #    celular = self.ui.lineEdit_9.text()   +" " + self.ui.lineEdit_6.text()  
-        #    fijo = self.ui.lineEdit_10.text()   +" " +self.ui.lineEdit_8.text()
-        #    ubica = (self.ui.lineEdit_11.text()).capitalize()
-        #    pagina_web = (self.ui.lineEdit_12.text()).lower()
-        #    servicio = (self.ui.textEdit.toPlainText()).capitalize()
-        #    
-        #    conn = sqlite3.connect("BD_COMPRAS.sqlite3")    
-        #    
-        #    argumentos = (name, empresa, cargo, correo,celular,fijo,ubica,pagina_web,servicio, datetime.date.today())
-        #    sql = """INSERT INTO CONTACTOS_GENERAL (Nombre,Empresa,Cargo,correo,Tel_Celular,Tel_Fijo,Ubicacion,Pagina_web,Tipo_servicio,Fecha_ingreso)
-        #    VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"""
-        #    try:
-        #        conn.execute(sql, argumentos)
-        #        conn.commit()
-        #        conn.close()
-        #    except:
-        #        from PyQt5 import  QtWidgets
-        #        msg=QtWidgets.QMessageBox()
-        #        msg.about(self, "Error", "Ha ocurrido un error al guardar los datos.")
-        #        
-        #    self.ui.label_15.setText('<html><head/><body><p align="center"><span style=" font-size:10pt; color:#37a651;">%s</span></p></body></html>'%("GUARDADO - "+ name))
-        #    self.ui.lineEdit_3.clear()
-        #    self.ui.lineEdit_4.clear()
-        #    self.ui.lineEdit_5.clear()
-        #    self.ui.lineEdit_7.clear()
-        #    self.ui.lineEdit_6.clear()
-        #    self.ui.lineEdit_8.clear()
-        #    self.ui.lineEdit_11.clear()
-        #    self.ui.lineEdit_12.clear()
-        #    self.ui.textEdit.clear()
+            mb=float(self.ui.doubleSpinBox_18.text())     
+            self_dis =float(self.ui.doubleSpinBox_4.text())   
+            c_rate=float(self.ui.doubleSpinBox.text())   
+            dod_max=float(self.ui.doubleSpinBox_3.text())   
+            cycles_max=float(self.ui.doubleSpinBox_5.text())   
+            cbat=float(self.ui.doubleSpinBox_6.text())
+            pbat_cell=float(self.ui.doubleSpinBox_7.text())   
+            vdc_sist=float(self.ui.doubleSpinBox_8.text()) 
+            vdc_bc=float(self.ui.doubleSpinBox_9.text())
+            ninv=float(self.ui.doubleSpinBox_2.text())
+            oym_factor=float(self.ui.doubleSpinBox_11.text())
+            factor_ini_inv=float(self.ui.doubleSpinBox_12.text())
+            lifecycle=float(self.ui.doubleSpinBox_13.text())
+            cki_bat=float(self.ui.doubleSpinBox_14.text())
+            nd=float(self.ui.doubleSpinBox_15.text())
+            nc=float(self.ui.doubleSpinBox_16.text())          
+
             
+            conn = sqlite3.connect("config.db")
+            sql = f"""UPDATE battery SET 
+            mb = {mb}, 
+            self_dis = {self_dis},
+            c_rate = {c_rate},
+            dod_max = {dod_max},
+            cycles_max = {cycles_max},
+            cbat = {cbat},
+            pbat_cell = {pbat_cell},
+            vdc_bc = {vdc_bc},
+            ninv = {ninv},
+            oym_factor = {oym_factor},
+            factor_ini_inv = {factor_ini_inv},
+            lifecycle= {lifecycle},
+            cki_bat = {cki_bat},
+            nd = {nd},
+            nc = {nc};"""
+
+            
+            conn.execute(sql)
+            conn.commit()
+            conn.close()
+
+            from PyQt5 import  QtWidgets
+            msg=QtWidgets.QMessageBox()
+            msg.about(self, "Ok", "The data have been updated")
+       
         
         except:
             import traceback

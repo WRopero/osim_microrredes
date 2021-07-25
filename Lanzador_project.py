@@ -39,8 +39,9 @@ class Project(QtWidgets.QDialog):
         self.ui.doubleSpinBox_5.setValue(df.loc[0,'tax_reduction'])   
         self.ui.doubleSpinBox_6.setValue(df.loc[0,'T1'])
         self.ui.doubleSpinBox_7.setValue(df.loc[0,'T2'])   
-        self.ui.doubleSpinBox_8.setValue(df.loc[0,'corporate_tax']) 
-        
+        self.ui.doubleSpinBox_8.setValue(df.loc[0,'corporate_tax'])
+
+        self.ui.pushButton.clicked.connect(self.guardar)       
 
         
         
@@ -65,45 +66,42 @@ class Project(QtWidgets.QDialog):
                     s = s[:-1] + "\n" #eliminate last '\t'
                 self.ui.clip.setText(s)
                 
-    def guardar_c(self):
+    def guardar(self):
         
         try:
-            print("Hola")
-        #    name = (self.ui.lineEdit_3.text()).upper()
-        #    empresa = (self.ui.lineEdit_4.text()).upper()
-        #    cargo = (self.ui.lineEdit_5.text()).capitalize()
-        #    correo = (self.ui.lineEdit_7.text()).lower()
-        #    celular = self.ui.lineEdit_9.text()   +" " + self.ui.lineEdit_6.text()  
-        #    fijo = self.ui.lineEdit_10.text()   +" " +self.ui.lineEdit_8.text()
-        #    ubica = (self.ui.lineEdit_11.text()).capitalize()
-        #    pagina_web = (self.ui.lineEdit_12.text()).lower()
-        #    servicio = (self.ui.textEdit.toPlainText()).capitalize()
-        #    
-        #    conn = sqlite3.connect("BD_COMPRAS.sqlite3")    
-        #    
-        #    argumentos = (name, empresa, cargo, correo,celular,fijo,ubica,pagina_web,servicio, datetime.date.today())
-        #    sql = """INSERT INTO CONTACTOS_GENERAL (Nombre,Empresa,Cargo,correo,Tel_Celular,Tel_Fijo,Ubicacion,Pagina_web,Tipo_servicio,Fecha_ingreso)
-        #    VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"""
-        #    try:
-        #        conn.execute(sql, argumentos)
-        #        conn.commit()
-        #        conn.close()
-        #    except:
-        #        from PyQt5 import  QtWidgets
-        #        msg=QtWidgets.QMessageBox()
-        #        msg.about(self, "Error", "Ha ocurrido un error al guardar los datos.")
-        #        
-        #    self.ui.label_15.setText('<html><head/><body><p align="center"><span style=" font-size:10pt; color:#37a651;">%s</span></p></body></html>'%("GUARDADO - "+ name))
-        #    self.ui.lineEdit_3.clear()
-        #    self.ui.lineEdit_4.clear()
-        #    self.ui.lineEdit_5.clear()
-        #    self.ui.lineEdit_7.clear()
-        #    self.ui.lineEdit_6.clear()
-        #    self.ui.lineEdit_8.clear()
-        #    self.ui.lineEdit_11.clear()
-        #    self.ui.lineEdit_12.clear()
-        #    self.ui.textEdit.clear()
+            life_time=float(self.ui.doubleSpinBox_2.text()) 
+            lpsp_max =float(self.ui.doubleSpinBox_4.text())
+            ir=float(self.ui.doubleSpinBox.text() )
+            cens=float(self.ui.doubleSpinBox_3.text())
+            tax_reduction=float(self.ui.doubleSpinBox_5.text())   
+            T1=float(self.ui.doubleSpinBox_6.text())
+            T2=float(self.ui.doubleSpinBox_7.text())
+            corporate_tax=float(self.ui.doubleSpinBox_8.text())             
+
             
+            conn = sqlite3.connect("config.db")
+            sql = f"""UPDATE project SET 
+            life_time = {life_time}, 
+            lpsp_max = {lpsp_max},
+            ir = {ir},
+            cens = {cens},
+            tax_reduction = {tax_reduction},
+            T1 = {T1},
+            T2 = {T2},
+            corporate_tax = {corporate_tax};"""
+
+            try:
+                conn.execute(sql)
+                conn.commit()
+                conn.close()
+            except:
+                from PyQt5 import  QtWidgets                
+                msg=QtWidgets.QMessageBox()
+                msg.about(self, "Error", "Ha ocurrido un error al guardar los datos.")
+            from PyQt5 import  QtWidgets
+            msg=QtWidgets.QMessageBox()
+            msg.about(self, "Ok", "The data have been updated")
+       
         
         except:
             import traceback

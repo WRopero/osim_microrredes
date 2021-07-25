@@ -2,18 +2,20 @@
 
 # Form implementation generated from reading ui file 'project.ui'
 #
-# Created by: PyQt5 UI code generator 5.9.2
+# Created by: PyQt5 UI code generator 5.14.1
 #
 # WARNING! All changes made in this file will be lost!
 
+
 from PyQt5 import QtCore, QtGui, QtWidgets
+
 
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(380, 427)
+        Dialog.resize(464, 445)
         self.gridLayoutWidget = QtWidgets.QWidget(Dialog)
-        self.gridLayoutWidget.setGeometry(QtCore.QRect(30, 50, 321, 331))
+        self.gridLayoutWidget.setGeometry(QtCore.QRect(30, 50, 409, 331))
         self.gridLayoutWidget.setObjectName("gridLayoutWidget")
         self.gridLayout = QtWidgets.QGridLayout(self.gridLayoutWidget)
         self.gridLayout.setContentsMargins(0, 0, 0, 0)
@@ -147,11 +149,11 @@ class Ui_Dialog(object):
         self.doubleSpinBox_8.setObjectName("doubleSpinBox_8")
         self.gridLayout.addWidget(self.doubleSpinBox_8, 8, 1, 1, 1)
         self.label_16 = QtWidgets.QLabel(Dialog)
-        self.label_16.setGeometry(QtCore.QRect(30, 10, 321, 31))
+        self.label_16.setGeometry(QtCore.QRect(30, 10, 411, 31))
         self.label_16.setStyleSheet("background-color: rgb(208, 208, 208);")
         self.label_16.setObjectName("label_16")
         self.pushButton = QtWidgets.QPushButton(Dialog)
-        self.pushButton.setGeometry(QtCore.QRect(150, 390, 75, 23))
+        self.pushButton.setGeometry(QtCore.QRect(210, 410, 75, 23))
         self.pushButton.setObjectName("pushButton")
 
         self.retranslateUi(Dialog)
@@ -180,4 +182,3 @@ if __name__ == "__main__":
     ui.setupUi(Dialog)
     Dialog.show()
     sys.exit(app.exec_())
-
