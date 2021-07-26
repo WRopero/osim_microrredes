@@ -1,5 +1,5 @@
 import sys
-from main import *;
+from interface.main import *;
 from PyQt5 import QtCore, QtGui, QtWidgets
 import pandas as pd
 import sqlite3, datetime
