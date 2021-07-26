@@ -11,7 +11,7 @@ import Lanzador_optimizer as op
 import Lanzador_graficos_ce as gr 
 
 import os
-import funcion_tabla as ft
+import interface.funcion_tabla as ft
 
 class Principal_c(QtWidgets.QMainWindow):
     def __init__(self, parent=None): 
