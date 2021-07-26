@@ -1,0 +1,132 @@
+
+Gurobi 9.0.3 (win64) logging started Tue Jun  1 22:53:58 2021
+
+Changed value of parameter LogFile to C:\Users\wrope\Documents\01. UdeA\00. Tesis\09. Implementacion\dimensionamiento_microrred\src\log_opt\32.txt
+   Prev:   Default: 
+Changed value of parameter mipgap to 0.05
+   Prev: 0.0001  Min: 0.0  Max: inf  Default: 0.0001
+Changed value of parameter TimeLimit to 180.0
+   Prev: inf  Min: 0.0  Max: inf  Default: inf
+Gurobi Optimizer version 9.0.3 build v9.0.3rc0 (win64)
+Optimize a model with 148922 rows, 113880 columns and 359159 nonzeros
+Model fingerprint: 0xc2b3deea
+Variable types: 87600 continuous, 26280 integer (26280 binary)
+Coefficient statistics:
+  Matrix range     [3e-05, 1e+01]
+  Objective range  [1e+01, 2e+03]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e-04, 2e+03]
+Presolve removed 56413 rows and 36064 columns
+Presolve time: 1.96s
+Presolved: 92509 rows, 77816 columns, 261283 nonzeros
+Variable types: 55573 continuous, 22243 integer (22243 binary)
+
+Deterministic concurrent LP optimizer: primal and dual simplex
+Showing first log only...
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+   57162    2.5665387e+07   8.542333e+01   1.610457e+09      6s
+Concurrent spin time: 0.44s
+
+Solved with dual simplex
+
+Root relaxation: objective 1.642897e+07, 36932 iterations, 3.54 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 1.6429e+07    0 5693          - 1.6429e+07      -     -   12s
+     0     0 1.6668e+07    0 4625          - 1.6668e+07      -     -   33s
+     0     0 1.7250e+07    0 3787          - 1.7250e+07      -     -   43s
+     0     0 1.7468e+07    0 3333          - 1.7468e+07      -     -   46s
+     0     0 1.7474e+07    0 3181          - 1.7474e+07      -     -   47s
+     0     0 1.7474e+07    0 3175          - 1.7474e+07      -     -   48s
+     0     0 1.7474e+07    0 3175          - 1.7474e+07      -     -   48s
+     0     0 1.7764e+07    0 2260          - 1.7764e+07      -     -   52s
+H    0     0                    1.833066e+07 1.7764e+07  3.09%     -   54s
+
+Cutting planes:
+  Learned: 603
+  Gomory: 211
+  Implied bound: 2415
+  MIR: 1904
+  Flow cover: 5486
+  RLT: 2126
+  Relax-and-lift: 224
+
+Explored 1 nodes (62406 simplex iterations) in 54.59 seconds
+Thread count was 4 (of 4 available processors)
+
+Solution count 1: 1.83307e+07 
+
+Optimal solution found (tolerance 5.00e-02)
+Best objective 1.833066473139e+07, best bound 1.776414713557e+07, gap 3.0905%
+
+Gurobi 9.0.3 (win64) logging started Tue Jun  1 23:21:17 2021
+
+Changed value of parameter LogFile to C:\Users\wrope\Documents\01. UdeA\00. Tesis\09. Implementacion\dimensionamiento_microrred\src\log_opt\32.txt
+   Prev:   Default: 
+Changed value of parameter mipgap to 0.05
+   Prev: 0.0001  Min: 0.0  Max: inf  Default: 0.0001
+Changed value of parameter TimeLimit to 3600.0
+   Prev: inf  Min: 0.0  Max: inf  Default: inf
+Gurobi Optimizer version 9.0.3 build v9.0.3rc0 (win64)
+Optimize a model with 148922 rows, 113880 columns and 359159 nonzeros
+Model fingerprint: 0xc2b3deea
+Variable types: 87600 continuous, 26280 integer (26280 binary)
+Coefficient statistics:
+  Matrix range     [3e-05, 1e+01]
+  Objective range  [1e+01, 2e+03]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e-04, 2e+03]
+Presolve removed 56413 rows and 36064 columns
+Presolve time: 1.84s
+Presolved: 92509 rows, 77816 columns, 261283 nonzeros
+Variable types: 55573 continuous, 22243 integer (22243 binary)
+
+Deterministic concurrent LP optimizer: primal and dual simplex
+Showing first log only...
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+   57162    2.5665387e+07   8.542333e+01   1.610457e+09      6s
+Concurrent spin time: 0.43s
+
+Solved with dual simplex
+
+Root relaxation: objective 1.642897e+07, 36932 iterations, 3.40 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 1.6429e+07    0 5693          - 1.6429e+07      -     -   11s
+     0     0 1.6668e+07    0 4625          - 1.6668e+07      -     -   30s
+     0     0 1.7250e+07    0 3787          - 1.7250e+07      -     -   40s
+     0     0 1.7468e+07    0 3333          - 1.7468e+07      -     -   43s
+     0     0 1.7474e+07    0 3181          - 1.7474e+07      -     -   44s
+     0     0 1.7474e+07    0 3175          - 1.7474e+07      -     -   44s
+     0     0 1.7474e+07    0 3175          - 1.7474e+07      -     -   45s
+     0     0 1.7764e+07    0 2260          - 1.7764e+07      -     -   48s
+H    0     0                    1.833066e+07 1.7764e+07  3.09%     -   50s
+
+Cutting planes:
+  Learned: 603
+  Gomory: 211
+  Implied bound: 2415
+  MIR: 1904
+  Flow cover: 5486
+  RLT: 2126
+  Relax-and-lift: 224
+
+Explored 1 nodes (62406 simplex iterations) in 50.66 seconds
+Thread count was 4 (of 4 available processors)
+
+Solution count 1: 1.83307e+07 
+
+Optimal solution found (tolerance 5.00e-02)
+Best objective 1.833066473139e+07, best bound 1.776414713557e+07, gap 3.0905%

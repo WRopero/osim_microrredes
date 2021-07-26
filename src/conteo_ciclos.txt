@@ -1,0 +1,157 @@
+mes 1
+El programa 'Dimensionamiento de microrredes' es:  optimal
+max_ciclos_carga_descarga_lpsp : Size=3
+    Key : Lower : Body                 : Upper
+      1 :  None :                 56.0 : 100000.0
+      2 :  None :                 62.0 : 100000.0
+      3 :  None : 0.018321976004279594 :      1.0
+max_ciclos_carga_descarga_lpsp : Size=3
+    Key : Lower : Body                 : Upper
+      1 :  None :                 56.0 : 100000.0
+      2 :  None :                 62.0 : 100000.0
+      3 :  None : 0.018321976004279594 :      1.0
+------------------------------------------------------------
+mes 2
+El programa 'Dimensionamiento de microrredes' es:  optimal
+max_ciclos_carga_descarga_lpsp : Size=3
+    Key : Lower : Body                 : Upper
+      1 :  None :                 46.0 : 100000.0
+      2 :  None :                 56.0 : 100000.0
+      3 :  None : 0.018257629087701375 :      1.0
+max_ciclos_carga_descarga_lpsp : Size=3
+    Key : Lower : Body                 : Upper
+      1 :  None :                 46.0 : 100000.0
+      2 :  None :                 56.0 : 100000.0
+      3 :  None : 0.018257629087701375 :      1.0
+------------------------------------------------------------
+mes 3
+El programa 'Dimensionamiento de microrredes' es:  optimal
+max_ciclos_carga_descarga_lpsp : Size=3
+    Key : Lower : Body                 : Upper
+      1 :  None :                 51.0 : 100000.0
+      2 :  None :                 63.0 : 100000.0
+      3 :  None : 0.018513004360250333 :      1.0
+max_ciclos_carga_descarga_lpsp : Size=3
+    Key : Lower : Body                 : Upper
+      1 :  None :                 51.0 : 100000.0
+      2 :  None :                 63.0 : 100000.0
+      3 :  None : 0.018513004360250333 :      1.0
+------------------------------------------------------------
+mes 4
+El programa 'Dimensionamiento de microrredes' es:  optimal
+max_ciclos_carga_descarga_lpsp : Size=3
+    Key : Lower : Body                 : Upper
+      1 :  None :                 49.0 : 100000.0
+      2 :  None :                 66.0 : 100000.0
+      3 :  None : 0.020299398567008003 :      1.0
+max_ciclos_carga_descarga_lpsp : Size=3
+    Key : Lower : Body                 : Upper
+      1 :  None :                 49.0 : 100000.0
+      2 :  None :                 66.0 : 100000.0
+      3 :  None : 0.020299398567008003 :      1.0
+------------------------------------------------------------
+mes 5
+El programa 'Dimensionamiento de microrredes' es:  optimal
+max_ciclos_carga_descarga_lpsp : Size=3
+    Key : Lower : Body                 : Upper
+      1 :  None :                 54.0 : 100000.0
+      2 :  None :                 68.0 : 100000.0
+      3 :  None : 0.027171955589094472 :      1.0
+max_ciclos_carga_descarga_lpsp : Size=3
+    Key : Lower : Body                 : Upper
+      1 :  None :                 54.0 : 100000.0
+      2 :  None :                 68.0 : 100000.0
+      3 :  None : 0.027171955589094472 :      1.0
+------------------------------------------------------------
+mes 6
+El programa 'Dimensionamiento de microrredes' es:  optimal
+max_ciclos_carga_descarga_lpsp : Size=3
+    Key : Lower : Body                 : Upper
+      1 :  None :                 48.0 : 100000.0
+      2 :  None :                 63.0 : 100000.0
+      3 :  None : 0.012110990993877977 :      1.0
+max_ciclos_carga_descarga_lpsp : Size=3
+    Key : Lower : Body                 : Upper
+      1 :  None :                 48.0 : 100000.0
+      2 :  None :                 63.0 : 100000.0
+      3 :  None : 0.012110990993877977 :      1.0
+------------------------------------------------------------
+mes 7
+El programa 'Dimensionamiento de microrredes' es:  optimal
+max_ciclos_carga_descarga_lpsp : Size=3
+    Key : Lower : Body                 : Upper
+      1 :  None :                 41.0 : 100000.0
+      2 :  None :                 57.0 : 100000.0
+      3 :  None : 0.006584558502831254 :      1.0
+max_ciclos_carga_descarga_lpsp : Size=3
+    Key : Lower : Body                 : Upper
+      1 :  None :                 41.0 : 100000.0
+      2 :  None :                 57.0 : 100000.0
+      3 :  None : 0.006584558502831254 :      1.0
+------------------------------------------------------------
+mes 8
+El programa 'Dimensionamiento de microrredes' es:  optimal
+max_ciclos_carga_descarga_lpsp : Size=3
+    Key : Lower : Body                 : Upper
+      1 :  None :                 45.0 : 100000.0
+      2 :  None :                 60.0 : 100000.0
+      3 :  None : 0.020393988242359957 :      1.0
+max_ciclos_carga_descarga_lpsp : Size=3
+    Key : Lower : Body                 : Upper
+      1 :  None :                 45.0 : 100000.0
+      2 :  None :                 60.0 : 100000.0
+      3 :  None : 0.020393988242359957 :      1.0
+------------------------------------------------------------
+mes 9
+El programa 'Dimensionamiento de microrredes' es:  optimal
+max_ciclos_carga_descarga_lpsp : Size=3
+    Key : Lower : Body                 : Upper
+      1 :  None :                 45.0 : 100000.0
+      2 :  None :                 55.0 : 100000.0
+      3 :  None : 0.014211779220755907 :      1.0
+max_ciclos_carga_descarga_lpsp : Size=3
+    Key : Lower : Body                 : Upper
+      1 :  None :                 45.0 : 100000.0
+      2 :  None :                 55.0 : 100000.0
+      3 :  None : 0.014211779220755907 :      1.0
+------------------------------------------------------------
+mes 10
+El programa 'Dimensionamiento de microrredes' es:  optimal
+max_ciclos_carga_descarga_lpsp : Size=3
+    Key : Lower : Body                 : Upper
+      1 :  None :                 57.0 : 100000.0
+      2 :  None :                 59.0 : 100000.0
+      3 :  None : 0.038543912230403994 :      1.0
+max_ciclos_carga_descarga_lpsp : Size=3
+    Key : Lower : Body                 : Upper
+      1 :  None :                 57.0 : 100000.0
+      2 :  None :                 59.0 : 100000.0
+      3 :  None : 0.038543912230403994 :      1.0
+------------------------------------------------------------
+mes 11
+El programa 'Dimensionamiento de microrredes' es:  optimal
+max_ciclos_carga_descarga_lpsp : Size=3
+    Key : Lower : Body               : Upper
+      1 :  None :               54.0 : 100000.0
+      2 :  None :               56.0 : 100000.0
+      3 :  None : 0.0359678801682138 :      1.0
+max_ciclos_carga_descarga_lpsp : Size=3
+    Key : Lower : Body               : Upper
+      1 :  None :               54.0 : 100000.0
+      2 :  None :               56.0 : 100000.0
+      3 :  None : 0.0359678801682138 :      1.0
+------------------------------------------------------------
+mes 12
+El programa 'Dimensionamiento de microrredes' es:  optimal
+max_ciclos_carga_descarga_lpsp : Size=3
+    Key : Lower : Body                 : Upper
+      1 :  None :                 56.0 : 100000.0
+      2 :  None :                 58.0 : 100000.0
+      3 :  None : 0.036466853070712194 :      1.0
+max_ciclos_carga_descarga_lpsp : Size=3
+    Key : Lower : Body                 : Upper
+      1 :  None :                 56.0 : 100000.0
+      2 :  None :                 58.0 : 100000.0
+      3 :  None : 0.036466853070712194 :      1.0
+------------------------------------------------------------
+Elapsed time: 2.2000000000 minutes.

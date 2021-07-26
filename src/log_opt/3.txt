@@ -1,0 +1,97 @@
+
+Gurobi 9.1.2 (win64) logging started Tue Jun  1 00:16:50 2021
+
+Changed value of parameter LogFile to C:\Users\Luis Fdo Baquero B\Documents\09. Implementacion\dimensionamiento_microrred\src\log_opt\3.txt
+   Prev:   Default: 
+Changed value of parameter mipgap to 0.05
+   Prev: 0.0001  Min: 0.0  Max: inf  Default: 0.0001
+Gurobi Optimizer version 9.1.2 build v9.1.2rc0 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 148922 rows, 113880 columns and 359159 nonzeros
+Model fingerprint: 0x8746cd31
+Variable types: 87600 continuous, 26280 integer (26280 binary)
+Coefficient statistics:
+  Matrix range     [3e-05, 1e+01]
+  Objective range  [1e+01, 2e+03]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [2e-04, 3e+03]
+Presolve removed 60013 rows and 42062 columns
+Presolve time: 0.97s
+Presolved: 88909 rows, 71818 columns, 248173 nonzeros
+Variable types: 50635 continuous, 21183 integer (21183 binary)
+
+Deterministic concurrent LP optimizer: primal and dual simplex
+Showing first log only...
+
+Concurrent spin time: 0.00s
+
+Solved with dual simplex
+
+Root relaxation: objective 1.698249e+07, 37367 iterations, 1.67 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 1.6982e+07    0 5689          - 1.6982e+07      -     -    8s
+     0     0 1.7382e+07    0 4866          - 1.7382e+07      -     -   21s
+     0     0 1.7863e+07    0 4399          - 1.7863e+07      -     -   27s
+     0     0 1.8065e+07    0 4392          - 1.8065e+07      -     -   30s
+     0     0 1.8076e+07    0 4534          - 1.8076e+07      -     -   32s
+     0     0 1.8078e+07    0 4495          - 1.8078e+07      -     -   33s
+     0     0 1.8078e+07    0 4495          - 1.8078e+07      -     -   34s
+     0     0 1.8291e+07    0 4634          - 1.8291e+07      -     -   36s
+     0     0 1.8394e+07    0 4356          - 1.8394e+07      -     -   38s
+     0     0 1.8408e+07    0 4531          - 1.8408e+07      -     -   40s
+     0     0 1.8408e+07    0 4622          - 1.8408e+07      -     -   40s
+     0     0 1.8409e+07    0 4641          - 1.8409e+07      -     -   41s
+     0     0 1.8444e+07    0 4245          - 1.8444e+07      -     -   45s
+     0     0 1.8449e+07    0 4381          - 1.8449e+07      -     -   48s
+     0     0 1.8449e+07    0 4471          - 1.8449e+07      -     -   48s
+     0     0 1.8460e+07    0 4444          - 1.8460e+07      -     -   53s
+H    0     0                    1.936544e+07 1.8460e+07  4.68%     -   54s
+
+Cutting planes:
+  Learned: 263
+  Gomory: 243
+  Cover: 28
+  Implied bound: 1565
+  MIR: 3577
+  Flow cover: 8156
+  RLT: 2215
+  Relax-and-lift: 535
+
+Explored 1 nodes (81524 simplex iterations) in 54.74 seconds
+Thread count was 8 (of 8 available processors)
+
+Solution count 1: 1.93654e+07 
+
+Optimal solution found (tolerance 5.00e-02)
+Best objective 1.936543548047e+07, best bound 1.845977700363e+07, gap 4.6767%
+
+Gurobi 9.0.3 (win64) logging started Tue Jun  1 14:37:33 2021
+
+Changed value of parameter LogFile to C:\Users\wrope\Documents\01. UdeA\00. Tesis\09. Implementacion\dimensionamiento_microrred\src\log_opt\3.txt
+   Prev:   Default: 
+Changed value of parameter mipgap to 0.05
+   Prev: 0.0001  Min: 0.0  Max: inf  Default: 0.0001
+Changed value of parameter TimeLimit to 3600.0
+   Prev: inf  Min: 0.0  Max: inf  Default: inf
+Gurobi Optimizer version 9.0.3 build v9.0.3rc0 (win64)
+Optimize a model with 148922 rows, 113880 columns and 359159 nonzeros
+Model fingerprint: 0x5c8606c0
+Variable types: 87600 continuous, 26280 integer (26280 binary)
+Coefficient statistics:
+  Matrix range     [3e-05, 1e+01]
+  Objective range  [1e+01, 2e+03]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [2e-04, 2e+03]
+Presolve removed 0 rows and 17520 columns
+Presolve time: 0.07s
+
+Explored 0 nodes (0 simplex iterations) in 0.24 seconds
+Thread count was 1 (of 4 available processors)
+
+Solution count 0
+
+Model is infeasible
+Best objective -, best bound -, gap -
