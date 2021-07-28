@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>745</width>
+    <width>769</width>
     <height>448</height>
    </rect>
   </property>
@@ -46,7 +46,7 @@
        </sizepolicy>
       </property>
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:10pt; color:#000000;&quot;&gt;Msc Wilmer Ropero Castaño @2021&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:10pt; color:#000000;&quot;&gt;Developed by Wilmer Ropero Castaño @2021&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
     </item>
@@ -548,7 +548,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>745</width>
+     <width>769</width>
      <height>26</height>
     </rect>
    </property>

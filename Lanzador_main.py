@@ -36,6 +36,8 @@ class Principal_c(QtWidgets.QMainWindow):
         self.ui.pushButton_6.clicked.connect(self.optimizador)
         self.ui.pushButton_3.clicked.connect(self.getxlsx)   
 
+        self.ui.label_14.setText("""<html><head/><body><p align="center"><br/><span style=" font-size:11pt; font-weight:600; color:#55aa7f;">The Result is &quot;Optimal&quot;</span></p></body></html>""")
+
     def getxlsx(self):
         self.ui.pushButton_3.setEnabled(0);
         self.ui.pushButton_3.setText("Loading...");      

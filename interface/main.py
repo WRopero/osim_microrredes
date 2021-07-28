@@ -13,7 +13,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(745, 448)
+        MainWindow.resize(769, 448)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.MinimumExpanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -336,7 +336,7 @@ class Ui_MainWindow(object):
         self.gridLayout_2.addWidget(self.line_12, 7, 0, 1, 3)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 745, 26))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 769, 26))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
@@ -349,7 +349,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.label_16.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:10pt; color:#000000;\">Msc Wilmer Ropero Castaño @2021</span></p></body></html>"))
+        self.label_16.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:10pt; color:#000000;\">Developed by Wilmer Ropero Castaño @2021</span></p></body></html>"))
         self.label_13.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:16pt; font-weight:600; color:#ffffff;\">OSIM</span></p><p align=\"center\"><span style=\" font-size:10pt; color:#ffffff;\">Optimal Sizing Islanded Microgrids</span></p></body></html>"))
         self.label_14.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\"><br/></p></body></html>"))
         self.label_15.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:10pt; font-weight:600;\">Parameters</span></p></body></html>"))
