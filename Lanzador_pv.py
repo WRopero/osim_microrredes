@@ -1,11 +1,11 @@
 import sys
-from pv import *;
+from interface.pv import *;
 from PyQt5 import QtCore, QtGui, QtWidgets
 import pandas as pd
 import sqlite3, datetime
 
 import os
-import funcion_tabla as ft
+import interface.funcion_tabla as ft
 
 class PV(QtWidgets.QDialog):
     def __init__(self, parent=None): 

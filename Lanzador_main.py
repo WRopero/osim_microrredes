@@ -1,5 +1,5 @@
 import sys
-from main import *;
+from interface.main import *;
 from PyQt5 import QtCore, QtGui, QtWidgets
 import pandas as pd
 import sqlite3, datetime
@@ -11,7 +11,7 @@ import Lanzador_optimizer as op
 import Lanzador_graficos_ce as gr 
 
 import os
-import funcion_tabla as ft
+import interface.funcion_tabla as ft
 
 class Principal_c(QtWidgets.QMainWindow):
     def __init__(self, parent=None): 
@@ -35,6 +35,8 @@ class Principal_c(QtWidgets.QMainWindow):
         self.ui.pushButton_5.clicked.connect(self.project_data)
         self.ui.pushButton_6.clicked.connect(self.optimizador)
         self.ui.pushButton_3.clicked.connect(self.getxlsx)   
+
+        self.ui.label_14.setText("""<html><head/><body><p align="center"><br/><span style=" font-size:11pt; font-weight:600; color:#55aa7f;">The Result is &quot;Optimal&quot;</span></p></body></html>""")
 
     def getxlsx(self):
         self.ui.pushButton_3.setEnabled(0);

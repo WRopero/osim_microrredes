@@ -1,5 +1,5 @@
 import sys
-from  graficos_ces import *;
+from  interface.graficos_ces import *;
 from PyQt5 import QtCore, QtGui, QtWidgets
 import pandas as pd
 import sqlite3, datetime
@@ -8,7 +8,7 @@ import time
 
 
 import os
-import graficos_ce as gr
+import interface.graficos_ce as gr
 
 
 
